@@ -1,14 +1,35 @@
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .grid {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
+  grid-gap: 64px;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 64px;
+}
+
+.grid-2 img {
+  width: 600px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-gap: 64px;
 }
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 
 body {
@@ -61,6 +82,39 @@ header a {
   background-color: white;
 }
 
+main {
+  background-color: rgb(242, 242, 244);
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: rgb(54, 53, 53);
+  opacity: 0.3;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: rgb(54, 53, 53);
+  margin: 0;
+}
+
+main p {
+  font-size: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: rgb(54, 53, 53);
+  opacity: 0.7;
+}
+
 footer {
   color: white;
   background-image: linear-gradient(
@@ -70,7 +124,6 @@ footer {
     url(../images/bellagio.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer h3 {
@@ -82,9 +135,8 @@ footer h3 {
 footer p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   opacity: 0.7;
-  margin-right: 20px;
 }
 
 footer ul {
@@ -114,5 +166,12 @@ footer a {
   }
   header h3 {
     font-size: 12px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+  section {
+    padding: 30px;
   }
 }
