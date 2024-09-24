@@ -9,7 +9,7 @@
 }
 
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -32,6 +32,11 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.embed {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
 .text-center {
   text-align: center;
 }
@@ -49,10 +54,20 @@
 .card-footer {
   padding: 0 30px 30px;
 }
+
+.card-header.grid {
+  grid-gap: 0;
+}
+
 .card-header img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+}
+
+.card-header iframe {
+  width: 100%;
+  height: 200px;
 }
 
 .btn {
@@ -235,5 +250,12 @@ footer a {
   }
   section {
     padding: 30px;
+  }
+  .card-header img {
+    display: none;
+  }
+
+  .embed {
+    aspect-ratio: 16 / 9;
   }
 }
