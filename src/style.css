@@ -1,5 +1,5 @@
 .container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .grid {
@@ -87,6 +87,77 @@
   background-color: #462cb3;
   text-decoration: none;
 }
+/* Section styling */
+.dishes-section {
+  background: #f8f8f8;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+.dishes-section h2,
+.dishes-section h3 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.dishes-section h2 {
+  font-size: 32px;
+  color: #272044;
+}
+
+.dishes-section h3 {
+  font-size: 24px;
+  color: #462cb3;
+  margin-bottom: 40px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background-color: #462cb3;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: #fff;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #462cb3;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f0f0ff;
+}
+
+.styled-table th {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.styled-table td {
+  color: #555;
+}
 
 section {
   max-width: 100%;
@@ -153,7 +224,7 @@ main {
 
 main h2 {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 40px;
   line-height: 1.5;
   letter-spacing: 3px;
   color: rgb(54, 53, 53);
@@ -164,10 +235,11 @@ main h2 {
 
 main h3 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 24px;
   line-height: 1.5;
   color: rgb(54, 53, 53);
   margin: 0;
+  color: #462cb3;
 }
 
 main h4 {
@@ -252,6 +324,10 @@ footer a {
     grid-template-columns: 1fr;
     grid-gap: 32px;
   }
+  .grid-2 {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
   section {
     padding: 30px;
   }
@@ -261,5 +337,42 @@ footer a {
 
   .embed {
     aspect-ratio: 16 / 9;
+  }
+  .styled-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .styled-table thead {
+    display: none;
+  }
+
+  .styled-table tbody,
+  .styled-table tr,
+  .styled-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .styled-table tbody tr {
+    margin-bottom: 20px;
+  }
+
+  .styled-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .styled-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
   }
 }
